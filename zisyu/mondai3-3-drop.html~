@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <!--
+      開始ボタンが押されるとcontrolで一定時間ごとにgazo_changeを呼び出し、終了ボタンが押されるとstopでcontrolの処理を終了する。
+    -->
+  <head>
+    <meta charset="utf-8">
+    <script type="text/javascript">
+      function pmove(){
+      var selected = document.bkmkmenu.bkmks.selectedIndex;
+      document.images["myImg1"].src = document.bkmkmenu.bkmks.options[selected].value;
+      }
+      }
+    </script>
+  </head>
+  <body>
+    <img src="imgGreece1.jpg" name="myImg1" width="640" height="480">
+    <form name = "bkmkmenu">
+      <select name ="bkmks" onchange = "pmove()">
+	<option value = "imgGreece1.jpg">画像1
+	<option value = "imgGreece2.jpg">画像2
+	<option value = "imgGreece3.jpg">画像3
+      </select>
+    </form>
+  </body>
+</html>

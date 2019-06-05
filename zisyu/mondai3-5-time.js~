@@ -1,0 +1,8 @@
+function time_sa() {
+    var time_2019, time_now, sa_day, sa_zikan, sa_byo;
+    time_now = new Date();
+    time_2019 = new Date(2020, 0, 1, 0, 0);
+    
+}
+
+time_sa();

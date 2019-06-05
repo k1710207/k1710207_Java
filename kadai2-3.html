@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <!--
+documentのstyleを変更することで画像をずらしている
+課題ではプログラムの停止を求められていないので、x>400のときも
+移動は止まるがプログラムは実行され続ける。
+    -->
+  <head>
+    <meta charset="utf-8">
+    <script type="text/javascript">
+      var Timer;
+
+
+      function move(){
+      var x = parseInt(document.images["myimg"].style.left);
+      if(x <= 400){
+	      x = x + 10;
+	      document.images["myimg"].style.left = x + "px";
+	      }
+	      }
+
+	      function control(){
+	      Timer = setInterval('move()', 100);
+	      }
+
+	      control();
+
+	      </script>
+  </head>
+  <body>
+    <img src="img1.png" name="myimg" style="position:absolute;left:0px;top:50px;">
+  </body>
+</html>

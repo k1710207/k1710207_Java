@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <!--
+
+    -->
+  <head>
+    <meta charset="utf-8">
+    <script type="text/javascript" src="mondai3-5-book.js">
+    </script>
+  </head>
+  <body>
+    
+    <form name = "bkmkmenu">
+      <input type = "radio" name = "bkmks" value = "http://www.uec.ac.jp" >電気通信大学<br>
+      <input type = "radio" name = "bkmks" value = "http://www.inf.uec.ac.jp" >電気通信大学総合情報学科<br>
+      <input type = "radio" name = "bkmks" value = "http://wlgate.ice.uec.ac.jp" >電気通信大学柏原研究室<br>
+      <input type = "radio" name = "bkmks" value = "http://www.google.co.jp" >検索エンジン:google<br>
+      <input type = "radio" name = "bkmks" value = "http://www.amazon.co.jp" >amazon.co.jp<br>
+      
+      <input type = "button" value = "move to the selected page" onclick = "pmove ()">
+    </form>
+    
+  </body>
+</html>

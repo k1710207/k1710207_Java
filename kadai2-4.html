@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<!--
+配列変数にURLとwindow.openの返り値を格納している。ウィンドウを開くときはwindow.openがnを受け取ると、array1[n]からURLを読み込み、array2[n]に配列変数を格納する。ウィンドウを閉じるときはarray2[n].window.close()とする。
+    -->
+  <head>
+    <meta charset="utf-8">
+    <script type="text/javascript">
+      var array1 = new Array('a.html', 'i.html', 'u.html', 'e.html', 'o.html');
+      var array2 = new Array(5);
+
+      function createNewWindow(n){
+      array2[n] = window.open(array1[n], "", "width=400, height=600, location = 1, scrollbars = 1");
+      }
+
+      function closeWindow(n){
+      array2[n].close();
+      }
+
+      function table_make(){
+      var i;
+      document.write("<table border>");
+
+	document.write("<thead>");
+	  document.write("<tr>");
+	    document.write("<th>名前</th>");
+	    document.write("<th>open</th>");
+	    document.write("<th>close</th>");
+	    document.write("</tr>");
+	  document.write("</thead>");
+
+	
+	document.write("<tbody>");
+
+	  for(i = 0; i <= 4; i++){
+			  document.write("<tr>");
+
+			  document.write("<td>", array1[i], "</td>");
+			  document.write("<td>", "<button onclick=createNewWindow(",i,")>Open</button>", "</td>");
+			  document.write("<td>", "<button onclick=closeWindow(",i,")>Close</button>", "</td>");
+
+			  document.write("</tr>");
+			  }
+			  
+			  document.write("</tbody>");
+			  document.write("</table>");
+			  return;
+			  }
+
+			  table_make();
+
+			  </script>
+  </head>
+  <body>
+  </body>
+</html>

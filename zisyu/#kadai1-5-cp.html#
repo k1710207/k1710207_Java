@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <!--
+      開始ボタンが押されるとcontrolで一定時間ごとにgazo_changeを呼び出し、終了ボタンが押されるとstopでcontrolの処理を終了する。
+    -->
+  <head>
+    <meta charset="utf-8">
+    <script type="text/javascript">
+      var Timer;
+
+      function gazo_change(){
+      var random;
+      random = Math.floor(Math.random () * 3);
+      if(random == 0){
+      document.images["myImg1"].src ="img1.png";
+      }else if(random == 1){
+      document.images["myImg1"].src ="img2.png";
+      }else if(random == 2){
+      document.images["myImg1"].src ="img3.png";
+      }else{
+      window.alert("?");
+      }
+      
+      }
+
+      function control(){
+      Timer = setInterval('gazo_change()', 5000);
+      }
+
+      function stop(){
+      clearInterval(Timer);
+      }
+
+
+
+    </script>
+  </head>
+  <body>
+    <img src="img1.png" name="myImg1" width="640" height="480">
+    <button type="button" onclick="control()">スライドショー開始</button>
+    <button type="button" onclick="stop()">スライドショー終了</button>
+  </body>
+</html>

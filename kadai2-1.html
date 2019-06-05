@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <!--
+randomとfloorで0から8までの乱数を発生させて表のそれぞれの行と列に書き込んでいる。
+ある行で生成された3つの乱数が全て等しければ赤色になる
+    -->
+  <head>
+    <meta charset="utf-8">
+    <script type="text/javascript">
+      function table_make(){
+      var i, j;
+      var number1, number2, number3;
+
+
+
+      document.write("<table border>");
+
+	document.write("<thead>");
+	  document.write("<tr>");
+	    document.write("<th>8^2の位</th>");
+	    document.write("<th>8^1の位</th>");
+	    document.write("<th>8^0の位</th>");
+	    document.write("</tr>");
+	  document.write("</thead>");
+
+	
+	document.write("<tbody>");
+
+	  for(i = 0; i <= 5; i++){
+			  document.write("<tr>");
+			  number1 = Math.floor(Math.random() * 8);
+			  number2 = Math.floor(Math.random() * 8);
+			  number3 = Math.floor(Math.random() * 8);
+			  if(number1 == number2 && number2 == number3){
+			  document.write("<td><font color=red>", number1, "</font></td>");
+			  document.write("<td><font color=red>", number2, "</font></td>");
+			  document.write("<td><font color=red>", number3, "</font></td>");
+			  }else{
+			  document.write("<td>", number1, "</td>");
+			  document.write("<td>", number2, "</td>");
+			  document.write("<td>", number3, "</td>");	    
+			  }
+			  document.write("</tr>");
+			  }
+			  
+			  document.write("</tbody>");
+			  document.write("</table>");
+			  return;
+			  }
+
+			  </script>
+  </head>
+  <body>
+    <script type="text/javascript">table_make()</script>
+  </body>
+</html>

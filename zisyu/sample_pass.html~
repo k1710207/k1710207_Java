@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <!--
+
+    -->
+  <head>
+    <meta charset="utf-8">
+    <script type="text/javascript" src="mondai3-1.js">
+    </script>
+  </head>
+  <body>
+    <form>
+      <input type="button" ondblclick="mup()" onclick="mdown()" value="click here">
+    </form>
+  </body>
+</html>

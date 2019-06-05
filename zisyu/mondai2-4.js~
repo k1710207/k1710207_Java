@@ -1,0 +1,34 @@
+var array1 = new Array("a", "i", "u", "e", "o");
+
+
+function table_make(){
+    var i;
+    document.write("<table border>");
+
+    document.write("<thead>");
+    document.write("<tr>");
+    document.write("<th>名前</th>");
+    document.write("<th>open</th>");
+    document.write("<th>close</th>");
+    document.write("</tr>");
+    document.write("</thead>");
+
+    
+    document.write("<tbody>");
+
+    for(i = 0; i <= 4; i++){
+	document.write("<tr>");
+
+	document.write("<td>", array1[i], "</td>");
+	document.write("<td>", "<button onclick=>Open</button>", "</td>");
+	document.write("<td>", "<button onclick=>Close</button>", "</td>");	    
+
+	document.write("</tr>");
+    }
+    
+    document.write("</tbody>");
+    document.write("</table>");
+    return;
+}
+
+table_make();

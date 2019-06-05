@@ -1,0 +1,20 @@
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=Shift_JIS">
+    <script type="text/javascript" src="mondai2-5.js">
+    </script>
+    <title>ブラウザ画面のスクロール</title>
+  </head>
+
+  <body>
+    <h1>クレタ島の風景</h1>
+    写真ごとに上下スクロール<br>
+    <button onclick="scroll()">The next photo</button><br>
+    <button>The previous photo</button>
+    <button>The next photo</button><br>
+    <button>The previous photo</button><br>
+    <button>Top</button><br>
+
+
+  </body>
+</html>

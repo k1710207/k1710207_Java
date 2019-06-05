@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <!--
+
+    -->
+  <head>
+    <meta charset="utf-8">
+    <script type="text/javascript" src="mondai3-4.js">
+    </script>
+  </head>
+  <body>
+    <div id="target" onclick="loop()">■■■■■</div>
+    <form name = "bkmkmenu">
+      <input type = "radio" name = "bkmks" value = "red" >赤<br>
+      <input type = "radio" name = "bkmks" value = "blue" >青<br>
+      <input type = "radio" name = "bkmks" value = "yellow" >黃<br>
+      <input type = "radio" name = "bkmks" value = "black" >黒<br>
+      <input type = "radio" name = "bkmks" value = "green" >緑<br>
+      <p>
+	<input type = "button" value = "change to the color" onclick = "change_color()">
+    </form>
+  </body>
+</html>

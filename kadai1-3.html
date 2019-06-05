@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <!--
+表の各行でべき乗とその合計を書き出している
+-->
+  <head>
+    <meta charset="utf-8">
+    <title>表</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+function table_make(){
+    var n, m, i;
+    n = window.prompt("n =");
+    m = window.prompt("m =");
+    if(isNaN(n) == false && isNaN(m) == false){
+	document.write("<table border>");
+
+	document.write("<thead>");
+	document.write("<tr>");
+	document.write("<th>べき数</th>");
+	document.write("<th>", n,"</th>");
+	document.write("<th>", m,"</th>");
+        document.write("<th>sum</th>");
+	document.write("</thead>");
+	document.write("</tr>");
+	
+	document.write("<tbody>");
+
+	for(i = 0; i <= 5; i++){
+	    document.write("<tr>");
+	    
+	    document.write("<td>", i, "</td>");
+	    document.write("<td>", n**i, "</td>");
+	    document.write("<td>", m**i, "</td>");
+	    document.write("<td>", n**i + m**i, "</td>");
+	    
+	    document.write("</tr>");
+	}
+	
+	document.write("</tbody>");
+	document.write("</table>");
+	return;
+    }else{
+	return;
+    }
+}
+
+table_make();
+
+    </script>
+  </body>
+</html>

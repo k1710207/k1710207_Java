@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <!--
+     授業で習った部分ではcookieの分割がわからなかったので以下のサイトを見ました
+      https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/String/split
+
+      https://javascript.programmer-reference.com/js-document-cookie-get/
+
+      getCookieArray()ではsplit()を用いてcookieの値をそれぞれ配列に格納する。
+      これによって属性ごとの値を参照している。
+    -->
+  <head>
+    <meta charset="utf-8">
+    <script type="text/javascript">
+      <!--
+	  var arr = new Array();
+
+	  function delete_c(){
+	  document.cookie.split(";").forEach(function(cookie) {
+	  var date = new Date();
+	  date.setDate(date.getDate() - 1);
+	  document.cookie = cookie.trim().replace(/=.*/, "=;expires=" + date.toUTCString() + "/");
+	  });
+	  }
+
+	  //delete_c();
+
+	  function getCookieArray(){
+	  if(document.cookie != ''){
+	  var tmp = document.cookie.split('; ');
+	  for(var i=0;i<tmp.length;i++){
+	  var data = tmp[i].split('=');
+	  arr[i] = unescape(data[1]);
+	  }
+	  }
+	  return arr;
+	  }
+
+	  function setinCookie (attr, valu) {
+	  var cData = attr + "=" + escape (valu) +";";
+	  var presentDay = new Date ( );
+	  var dd = presentDay.getDate ( );
+	  dd = dd +7;
+	  presentDay.setDate (dd);
+	  var expTime = presentDay.toGMTString ( );
+	  document.cookie = cData + "expires="+expTime;
+	  }
+
+
+	  function nyuryoku(){
+	  var u_name = prompt("氏名");
+	  var u_syumi = prompt("趣味");
+	  setinCookie("simei", u_name);
+	  setinCookie("syumi", u_syumi);
+	  setinCookie("homonkaisu", 1);
+	  }
+
+	  function situmon(){
+	  if(document.cookie == ""){
+	  nyuryoku();
+	  }else{
+	  getCookieArray();
+	  var kaisu = parseInt(arr[2]);
+	  kaisu = kaisu + 1;
+	  setinCookie("homonkaisu", kaisu);
+	  getCookieArray();
+	  window.alert("氏名:" + arr[0] + "\n趣味:" + arr[1] + "\n訪問回数:" + arr[2]);
+	  var result = window.confirm("趣味を変更しますか");
+	  if(result){
+	  var u_syumi = prompt("趣味");
+	  setinCookie("syumi", u_syumi);
+	  }
+	  }
+	  }
+
+
+	  situmon();
+	-->
+    </script>
+  </head>
+  <body>
+  </body>
+</html>

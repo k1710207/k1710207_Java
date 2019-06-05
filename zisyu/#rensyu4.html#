@@ -1,0 +1,24 @@
+<html><head>
+    <meta http-equiv="content-type" content="text/html; charset=Shift_JIS">
+    <title>Webブラウザ操作</title>
+    <script type="text/javascript">
+      var subWindow;
+      function oWindow(){
+      subWindow = window.open('new-window.html','新しい写真','width=800, height=600, location = 1');
+      }
+      function cWindow(){
+      subWindow.close();
+      }
+    </script>
+  </head>
+
+  <body>
+    <div align="center">
+      <h1>クレタ島の風景</h1>
+      <img src="Web%E3%83%96%E3%83%A9%E3%82%A6%E3%82%B6%E6%93%8D%E4%BD%9C_files/imgGreece1.jpg">
+      <br>
+      <button onclick="oWindow()">写真：エーゲ海</button>
+      <button onclick="cWindow()">写真を閉じる</button>
+    </div>
+
+</body></html>

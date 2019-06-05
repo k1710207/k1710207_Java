@@ -1,0 +1,30 @@
+<html>
+  <!--
+入力された文字列をStringオブジェクトとして操作し、文章内に指定された単語が存在しなくなるまで、単語以外の部分をつなげ合わせる。
+-->
+  <head>
+    <script type="text/javascript">      
+function key_word(){
+    var moji, sagyo, word;
+    var word_position;
+
+    moji = prompt("文字列を入力してください");
+    word = prompt("キーワードを入力してください");
+    sagyo = moji;
+
+    while( (word_position = sagyo.lastIndexOf(word)) != -1 ){
+	sagyo = sagyo.substr(0, word_position) + sagyo.substr(word_position + word.length, sagyo.length);
+    }
+
+    window.alert("キーワードの個数:" + parseInt((moji.length - sagyo.length)/word.length) + ", 新たな文字列:" + sagyo);
+    
+    return;
+}
+
+key_word();
+      
+    </script>
+  </head>
+  <body>
+  </body>
+</html>

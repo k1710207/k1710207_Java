@@ -1,0 +1,55 @@
+<html>
+    <!-- 
+2019年4月1日のように年月日を入力するとDayオブジェクトに変換する。生成されたDayオブジェクトを整数として計算し、週数を求める
+    -->
+  <head>
+    <script type="text/javascript">      
+      function japanese_to_day(moji){
+      var answer = new Date(1000, 0, 1);
+      var nen, gatsu, nichi;
+      var nen_position, gatsu_position, nichi_position;
+      nen_position = moji.lastIndexOf("年");
+      gatsu_position = moji.lastIndexOf("月");
+      nichi_position = moji.lastIndexOf("日");
+      nen = moji.substring(0, nen_position);
+      gatsu = moji.substring(nen_position+1, gatsu_position);
+      nichi = moji.substring(gatsu_position+1, nichi_position);
+      
+      if(nen_position != -1 && gatsu_position != -1 && nichi_position != -1){
+      answer = new Date(nen , gatsu-1 , nichi);
+      }
+      
+      return answer;
+      }
+
+
+
+      function week(){
+      var moji1, moji2;
+      var day1, day2, nissu, weeksu;
+      moji1 = prompt("開始日は何年何月何日ですか");
+      moji2 = prompt("終了日は何年何月何日ですか");
+      if(moji1 != null && moji2 != null){
+
+      day1 = japanese_to_day(moji1);
+      day2 = japanese_to_day(moji2);
+      nissu = parseInt((day2-day1)/86400000);
+      weeksu = parseInt(nissu/7);
+      window.alert("経過週数:" + weeksu + "週です");
+      
+      }else{
+      window.alert("入力されていません");
+      }
+      
+
+      return;
+      }
+
+
+      week();
+      
+    </script>
+  </head>
+  <body>
+  </body>
+</html>

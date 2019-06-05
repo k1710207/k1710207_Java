@@ -1,0 +1,3 @@
+function situmon(){
+    window.alert("unko");
+}

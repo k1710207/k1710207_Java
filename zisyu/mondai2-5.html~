@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+  <!--
+      配列変数にURLとwindow.openの返り値を格納している。ウィンドウを開くときはwindow.openがnを受け取ると、array1[n]からURLを読み込み、array2[n]に配列変数を格納する。ウィンドウを閉じるときはarray2[n].window.close()とする。
+    -->
+  <head>
+    <meta charset="utf-8">
+    <script type="text/javascript" src="2-5.js">
+    </script>
+  </head>
+  <body>
+    
+  </body>
+</html>

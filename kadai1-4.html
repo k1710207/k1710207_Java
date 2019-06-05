@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <!-- 
+       画像がクリックされたときgazo_sizeが呼び出される。画像が初期サイズと同じ時は画像を半分のサイズにし、初期サイズとちがければ初期サイズに戻す
+    -->
+  <head>
+    <meta charset="utf-8">
+    <script type="text/javascript">
+
+      function gazo_size(){
+      if( document.images["myImg1"].width == 640 ){
+      document.images["myImg1"].width = document.images["myImg1"].width/2;
+      document.images["myImg1"].height = document.images["myImg1"].height/2;
+      }else{
+      document.images["myImg1"].width = 640;
+      document.images["myImg1"].height = 480;
+      }
+      return;
+      }
+
+
+    </script>
+    
+  </head>
+  <body>
+    <img src="img1.png" name="myImg1" width="640" height="480" onclick="gazo_size()">
+  </body>
+</html>

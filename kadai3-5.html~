@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <!--
+
+    -->
+  <head>
+    <meta charset="utf-8">
+    <script type="text/javascript">
+      function pmove () {
+    var selected = document.bkmkmenu.bkmks.selectedIndex;
+    if (selected > 0) {
+	window.open (document.bkmkmenu.bkmks.options[selected].value);
+    }
+}
+
+    </script>
+  </head>
+  <body>
+    
+    <form name = "bkmkmenu">
+      <select name ="bkmks" onchange = "pmove()">
+	<option>ブックマーク集
+	<option value = "mondai3-5-book.html">ブックマーク集
+	<option value = "mondai3-5-time.html">2019年の残り時間
+	<option value = "mondai3-5-color.html">背景色自動変更
+      </select>
+    </form>
+    
+  </body>
+</html>
